@@ -1,5 +1,5 @@
 version: 2
-Jobs:
+jobs:
   build:
     docker:
       - image: woahbase/alpine-glibc:x86_64
