@@ -51,13 +51,14 @@ jobs:
       - checkout
       - run:
           name: Preprocess Alpine Packages
-          command: apk add -uU --no-cache --purge bash alpine-sdk sudo shadow curl ca-certificates openssl git unzip tar gzip aria2
+          command: |
+            apk add -uU --no-cache --purge bash alpine-sdk sudo shadow curl ca-certificates openssl git unzip tar gzip aria2
       - run:
           name: Set new Alpine user
           command: |
             set -xe
-            groupadd --gid 1000 alpine \
-            useradd --uid 1000 --gid alpine --shell /bin/bash --create-home alpine \
+            groupadd --gid 1000 alpine
+            useradd --uid 1000 --gid alpine --shell /bin/bash --create-home alpine
             echo 'alpine ALL=NOPASSWD: ALL' >> /etc/shadow
       - run:
           name: Get Set Go
