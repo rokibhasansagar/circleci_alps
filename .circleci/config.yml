@@ -71,7 +71,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 00 as XX"
             cat ${GZ00} >> ${GZXX}
-            ls -la *
             rm ${GZ00}
             echo "Downloading part 01"
             aria2c -x16 "https://va2.androidfilehost.com/dl/i59Mir3cQG75F16YVgza5Q/1569060961/${GZ01_Folder}/${GZ01}" \
@@ -80,7 +79,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 01 onto XX"
             cat ${GZ01} >> ${GZXX}
-            ls -la *
             rm ${GZ01}
             echo "Downloading part 02"
             aria2c -x16 "https://va2.androidfilehost.com/dl/86P1jovrrpkAR6PxqHc8NQ/1569061328/${GZ02_Folder}/${GZ02}" \
@@ -89,7 +87,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 02 onto XX"
             cat ${GZ02} >> ${GZXX}
-            ls -la *
             rm ${GZ02}
             echo "Downloading part 03"
             aria2c -x16 "https://va2.androidfilehost.com/dl/AXPqWgAAKENhjITAnak8Og/1569061396/${GZ03_Folder}/${GZ03}" \
@@ -98,7 +95,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 03 onto XX"
             cat ${GZ03} >> ${GZXX}
-            ls -la *
             rm ${GZ03}
             echo "Downloading part 04"
             aria2c -x16 "https://va2.androidfilehost.com/dl/pzdyCCOOtsFT20HP5Gwf6Q/1569061471/${GZ04_Folder}/${GZ04}" \
@@ -107,7 +103,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 04 onto XX"
             cat ${GZ04} >> ${GZXX}
-            ls -la *
             rm ${GZ04}
             echo "Downloading part 05"
             aria2c -x16 "https://or1.androidfilehost.com/dl/48QV9e1bakC1KschoBtkvA/1569061639/${GZ05_Folder}/${GZ05}" \
@@ -116,7 +111,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 05 onto XX"
             cat ${GZ05} >> ${GZXX}
-            ls -la *
             rm ${GZ05}
             echo "Downloading part 06"
             aria2c -x16 "https://or1.androidfilehost.com/dl/uqn3GLTaGyWTGZ0cf40vHw/1569061707/${GZ06_Folder}/${GZ06}" \
@@ -125,7 +119,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 06 onto XX"
             cat ${GZ06} >> ${GZXX}
-            ls -la *
             rm ${GZ06}
             echo "Downloading part 07"
             aria2c -x16 "https://or1.androidfilehost.com/dl/ne8Ywg9PDhXyt2B4xvtn4w/1569061752/${GZ07_Folder}/${GZ07}" \
@@ -134,7 +127,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 07 onto XX"
             cat ${GZ07} >> ${GZXX}
-            ls -la *
             rm ${GZ07}
             echo "Downloading part 08"
             aria2c -x16 "https://or1.androidfilehost.com/dl/6i7EiG2w8478mGXKxCDWAQ/1569061800/${GZ08_Folder}/${GZ08}" \
@@ -143,7 +135,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 08 onto XX"
             cat ${GZ08} >> ${GZXX}
-            ls -la *
             rm ${GZ08}
             echo "Downloading part 09"
             aria2c -x16 "https://va1.androidfilehost.com/dl/Pyr8DLFXFMGKu6PqkTMoGg/1569061858/${GZ09_Folder}/${GZ09}" \
@@ -152,7 +143,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 09 onto XX"
             cat ${GZ09} >> ${GZXX}
-            ls -la *
             rm ${GZ09}
             echo "Downloading part 10"
             aria2c -x16 "https://va1.androidfilehost.com/dl/i4Gt_lyhChQ-M9bw1kZcBA/1569061912/${GZ10_Folder}/${GZ10}" \
@@ -161,7 +151,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 10 onto XX"
             cat ${GZ10} >> ${GZXX}
-            ls -la *
             rm ${GZ10}
             echo "Downloading part 11"
             aria2c -x16 "https://va1.androidfilehost.com/dl/wC_aV-QGlO2OhRmQkIm6jw/1569061955/${GZ11_Folder}/${GZ11}" \
@@ -170,7 +159,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 11 onto XX"
             cat ${GZ11} >> ${GZXX}
-            ls -la *
             rm ${GZ11}
             echo "Downloading part 12"
             aria2c -x16 "https://or1.androidfilehost.com/dl/gpMKDfCjsweLjsRXpIw-pQ/1569061996/${GZ12_Folder}/${GZ12}" \
@@ -179,7 +167,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 12 onto XX"
             cat ${GZ12} >> ${GZXX}
-            ls -la *
             rm ${GZ12}
             echo "Downloading part 13"
             aria2c -x16 "https://va1.androidfilehost.com/dl/WKGX4mJK9o07yWdvbb9Npw/1569062065/${GZ13_Folder}/${GZ13}" \
@@ -188,7 +175,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 13 onto XX"
             cat ${GZ13} >> ${GZXX}
-            ls -la *
             rm ${GZ13}
             echo "Downloading part 14"
             aria2c -x16 "https://or1.androidfilehost.com/dl/euaTUazJMOais8bwXtwS-Q/1569062107/${GZ14_Folder}/${GZ14}" \
@@ -197,7 +183,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 14 onto XX"
             cat ${GZ14} >> ${GZXX}
-            ls -la *
             rm ${GZ14}
             echo "Downloading part 15"
             aria2c -x16 "https://va2.androidfilehost.com/dl/PPNSbQ-U7ofQDZqrxEwN6g/1569062203/${GZ15_Folder}/${GZ15}" \
@@ -206,7 +191,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 15 onto XX"
             cat ${GZ15} >> ${GZXX}
-            ls -la *
             rm ${GZ15}
             echo "Downloading part 16"
             aria2c -x16 "https://or1.androidfilehost.com/dl/8VCg1pBBx9GrqKS9CKt8mg/1569062298/${GZ16_Folder}/${GZ16}" \
@@ -215,7 +199,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 16 onto XX"
             cat ${GZ16} >> ${GZXX}
-            ls -la *
             rm ${GZ16}
             echo "Downloading part 17"
             aria2c -x16 "https://or1.androidfilehost.com/dl/v4FI-YhcidyfboHguh4_Lg/1569062348/${GZ17_Folder}/${GZ17}" \
@@ -224,7 +207,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 17 onto XX"
             cat ${GZ17} >> ${GZXX}
-            ls -la *
             rm ${GZ17}
             echo "Downloading part 18"
             aria2c -x16 "https://va2.androidfilehost.com/dl/26RKotNCQfUHV467yhEpzg/1569062450/${GZ18_Folder}/${GZ18}" \
@@ -233,7 +215,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 18 onto XX"
             cat ${GZ18} >> ${GZXX}
-            ls -la *
             rm ${GZ18}
             echo "Downloading part 19"
             aria2c -x16 "https://or1.androidfilehost.com/dl/ISdcwV4El2naGuUAWVZd1g/1569062492/${GZ19_Folder}/${GZ19}" \
@@ -242,7 +223,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 19 onto XX"
             cat ${GZ19} >> ${GZXX}
-            ls -la *
             rm ${GZ19}
             echo "Downloading last part 20"
             aria2c -x16 "https://va2.androidfilehost.com/dl/QAwnibbyKV8EByneKjB7Vw/1569062560/${GZ20_Folder}/${GZ20}" \
@@ -251,7 +231,6 @@ jobs:
               2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 20 onto XX"
             cat ${GZ20} >> ${GZXX}
-            ls -la *
             rm ${GZ20}
             echo "Primary Step done!"
             ls -las *
@@ -273,10 +252,13 @@ jobs:
             cd /home/alpine/alps_pie/
             while sleep 180; do date +%r; done & \
               git init
+              echo "git init done."
+              du -sh .git
               git remote add origin "https://github.com/${GitHubName}/ALPS_Pie_Source.git"
               git add -A .
-              echo "
+              echo "Addition done. Commiting..."
               git commit -m "Initial Upload" 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Final push started."
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
       - run:
           name: Upload log
