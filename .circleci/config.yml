@@ -52,7 +52,7 @@ jobs:
       - run:
           name: Preprocess Alpine Packages
           command: |
-            apk add -uU --no-cache --purge bash alpine-sdk libc6-compat sudo shadow curl ca-certificates openssl git unzip tar xz gzip aria2
+            apk add -uU --no-cache --purge bash alpine-sdk sudo shadow curl ca-certificates openssl git unzip tar xz gzip aria2
       - run:
           name: Set new Alpine user
           command: |
