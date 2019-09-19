@@ -52,7 +52,7 @@ jobs:
       - run:
           name: Preprocess Alpine Packages
           command: |
-            apk add -uU --no-cache --purge bash alpine-sdk sudo shadow curl ca-certificates openssl git unzip tar xz gzip aria2
+            apk add -uU --no-cache --purge bash alpine-sdk libc6-compat sudo shadow curl ca-certificates openssl git unzip tar xz gzip aria2
       - run:
           name: Set new Alpine user
           command: |
@@ -254,7 +254,7 @@ jobs:
             ls -la *
             rm ${GZ20}
             echo "Primary Step done!"
-            ls -la *
+            ls -las *
       - run:
           name: Extract All
           command: |
@@ -263,16 +263,7 @@ jobs:
               tar xzvf *.tar.gz 2>&1 1>>extractor.log | tee -a error.log
             mv "t-alps-release-p0.mp2-V3.100.mt6737-53-39-6580" "alps_pie"
             rm *.tar.gz
-            ls -la *
-      - run:
-          name: Upload log
-          command: |
-            cd /home/alpine/
-            du -sh *.log
-            tar cJf extractor_log.tar.xz extractor.log
-            curl --upload-file dl.log https://transfer.sh/ && echo ""
-            curl --upload-file extractor_log.tar.xz https://transfer.sh/ && echo ""
-            curl --upload-file error.log https://transfer.sh/ && echo ""
+            du -sh alps_pie/*
       - run:
           name: Git upload
           command: |
@@ -280,8 +271,21 @@ jobs:
             git config --global user.name $GitHubName
             git config --global color.ui true
             cd /home/alpine/alps_pie/
-            git init
-            git remote add origin "https://github.com/${GitHubName}/ALPS_Pie_Source.git"
-            git add -A .
-            git commit -q -m "Initial Upload"
-            git push -q --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie
+            while sleep 180; do date +%r; done & \
+              git init
+              git remote add origin "https://github.com/${GitHubName}/ALPS_Pie_Source.git"
+              git add -A .
+              echo "
+              git commit -m "Initial Upload" 2>&1 1>>../git.log | tee -a ../error.log
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+      - run:
+          name: Upload log
+          command: |
+            cd /home/alpine/
+            tar cJf extractor_log.tar.xz extractor.log
+            tar cJf git_log.tar.xz git.log
+            du -sh *.{log,xz}
+            curl --upload-file dl.log https://transfer.sh/ && echo ""
+            curl --upload-file extractor_log.tar.xz https://transfer.sh/ && echo ""
+            curl --upload-file git_log.tar.xz https://transfer.sh/ && echo ""
+            curl --upload-file error.log https://transfer.sh/ && echo ""
