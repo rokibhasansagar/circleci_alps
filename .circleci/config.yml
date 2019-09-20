@@ -253,7 +253,7 @@ jobs:
             git config --global color.ui true
             cd /home/alpine/
             while sleep 240; do date +%r; done & \
-              git clone https://github.com/${GitHubName}/${ALPS_Dest}.git work/
+              git clone https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git work/
               cd work/
               git checkout --orphan alps_pie
               git rm --cached -r .
