@@ -253,21 +253,105 @@ jobs:
             while sleep 180; do date +%r; done & \
               git init
               echo "git init done."
-              du -sh .git
               git remote add origin "https://github.com/${GitHubName}/ALPS_Pie_Source.git"
-              git add -A .
-              echo "Addition done. Commiting..."
-              git commit -m "Initial Upload" 2>&1 1>>../git.log | tee -a ../error.log
+              git add Android.bp Makefile bootstrap.bash a* b* c* dalvik developers development
+              echo "Primary Addition done. Commiting..."
+              git commit -m "Initial t-alps-release-p0.mp2-V3.100 Upload" 2>&1 1>>../git.log | tee -a ../error.log
               echo "Final push started."
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add device
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add f* h*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add k*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add l* packages
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add pdk platform_testing sdk test toolchain
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add system
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add tools trusty
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add vendor
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add prebuilts/{a*,b*}
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add prebuilts/{c*,d*}
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add prebuilts/g*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add prebuilts/{j*,k*}
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add prebuilts/{l*,m*}
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add prebuilts/{ndk,python}
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add prebuilts/{q*,r*}
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add prebuilts/sdk
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add prebuilts/tools
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              add prebuilts/vndk
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Checking and Adding any leftover"
+              git add -A .
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
+              echo "Full upload done."
+              echo "Final .git folder size --- "
+              du -sh .git
       - run:
-          name: Upload log
+          name: Cleanup and Upload log
           command: |
             cd /home/alpine/
-            tar cJf extractor_log.tar.xz extractor.log
-            tar cJf git_log.tar.xz git.log
-            du -sh *.{log,xz}
-            curl --upload-file dl.log https://transfer.sh/ && echo ""
-            curl --upload-file extractor_log.tar.xz https://transfer.sh/ && echo ""
-            curl --upload-file git_log.tar.xz https://transfer.sh/ && echo ""
-            curl --upload-file error.log https://transfer.sh/ && echo ""
+            while sleep 180; do date +%r; done & \
+              rm -rf alps_pie/
+              tar cJf extractor_log.tar.xz extractor.log
+              tar cJf git_log.tar.xz git.log
+              du -sh *.{log,xz}
+              curl --upload-file dl.log https://transfer.sh/ && echo ""
+              curl --upload-file extractor_log.tar.xz https://transfer.sh/ && echo ""
+              curl --upload-file git_log.tar.xz https://transfer.sh/ && echo ""
+              curl --upload-file error.log https://transfer.sh/ && echo ""
