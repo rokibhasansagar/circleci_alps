@@ -257,7 +257,7 @@ jobs:
               cd work/
               git checkout --orphan alps_pie
               git rm --cached -r .
-              mv ../alps_pie/{a*,b*,c*,dalvik,developers,development,Android.bp,Makefile,bootstrap.bash} .
+              mv ../alps_pie/{a*,b*,c*,dalvik,developers,development,Android.bp,Makefile,bootstrap.bash} -t .
               git add -A .
               echo "Primary Addition done. Commiting..."
               git commit -m "Initial t-alps-release-p0.mp2-V3.100 Upload" 2>&1 1>>../git.log | tee -a ../error.log
@@ -270,43 +270,43 @@ jobs:
               echo "Pushing more and more files, .device"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/a* ./external/
+              mv ../alps_pie/external/a* -t ./external/
               git add external/a*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .device"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/b* ./external/
+              mv ../alps_pie/external/b* -t ./external/
               git add external/b*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .device"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/c* ./external/
+              mv ../alps_pie/external/c* -t ./external/
               git add external/c*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .device"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/d* ./external/
+              mv ../alps_pie/external/d* -t ./external/
               git add external/d*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .device"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/e* ./external/
+              mv ../alps_pie/external/e* -t ./external/
               git add external/e*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .device"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/f* ./external/
+              mv ../alps_pie/external/f* -t ./external/
               git add external/f*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .device"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/g* ./external/
+              mv ../alps_pie/external/g* -t ./external/
               git add external/g*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .device"
@@ -314,37 +314,37 @@ jobs:
               du -sh .git
               echo "Phase-1 Done"
               sleep 10s
-              mv ../alps_pie/external/{h*,i*} ./external/
+              mv ../alps_pie/external/{h*,i*} -t ./external/
               git add external/{h*,i*}
               git commit -m "Initial t-alps-release-p0.mp2-V3.100 Upload" 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .device"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/j* ./external/
+              mv ../alps_pie/external/j* -t ./external/
               git add external/j*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-j"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/k* ./external/
+              mv ../alps_pie/external/k* -t ./external/
               git add external/k*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-k"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/lib* ./external/
+              mv ../alps_pie/external/lib* -t ./external/
               git add external/lib*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-lib"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/l* ./external/
+              mv ../alps_pie/external/l* -t ./external/
               git add external/l*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-l"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/m* ./external/
+              mv ../alps_pie/external/m* -t ./external/
               git add external/m*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-m"
@@ -352,37 +352,37 @@ jobs:
               du -sh .git
               echo "Phase-2 Done"
               sleep 10s
-              mv ../alps_pie/external/n* ./external/
+              mv ../alps_pie/external/n* -t ./external/
               git add external/n*
               git commit -m "Initial t-alps-release-p0.mp2-V3.100 Upload" 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-n"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/o* ./external/
+              mv ../alps_pie/external/o* -t ./external/
               git add external/o*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-o"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/p* ./external/
+              mv ../alps_pie/external/p* -t ./external/
               git add external/p*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-p"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/r* ./external/
+              mv ../alps_pie/external/r* -t ./external/
               git add external/r*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-r"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/s* ./external/
+              mv ../alps_pie/external/s* -t ./external/
               git add external/s*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-s"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/external/t* ./external/
+              mv ../alps_pie/external/t* -t ./external/
               git add external/t*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-t"
@@ -390,25 +390,25 @@ jobs:
               du -sh .git
               echo "Phase-3 Done"
               sleep 10s
-              mv ../alps_pie/external/{u,v,w,x,z}* ./external/
+              mv ../alps_pie/external/{u,v,w,x,z}* -t ./external/
               git add external/{u,v,w,x,z}*
               git commit -m "Initial t-alps-release-p0.mp2-V3.100 Upload" 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .external-uvwxz"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/{f,h}* .
+              mv ../alps_pie/{f,h}* -t .
               git add {f,h}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .f.h"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/k* .
+              mv ../alps_pie/k* -t .
               git add k*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .k"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/l* .
+              mv ../alps_pie/l* -t .
               git add l*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .l"
@@ -420,13 +420,13 @@ jobs:
               echo "Pushing more and more files, .pack"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/{pdk,platform_testing,sdk} .
+              mv ../alps_pie/{pdk,platform_testing,sdk} -t .
               git add pdk platform_testing sdk
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .pdk.plat.sdk"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/{test,toolchain} .
+              mv ../alps_pie/{test,toolchain} -t .
               git add test toolchain
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .test.tc"
@@ -440,7 +440,7 @@ jobs:
               echo "Pushing more and more files, .system"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/{tools,trusty} .
+              mv ../alps_pie/{tools,trusty} -t .
               git add tools trusty
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .tools.trusty"
@@ -452,19 +452,19 @@ jobs:
               echo "Pushing more and more files, .vendor"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/prebuilts/{a,b}* ./prebuilts/
+              mv ../alps_pie/prebuilts/{a,b}* -t ./prebuilts/
               git add prebuilts/{a,b}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .prebuilds-a-b"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/prebuilts/{c,d}* ./prebuilts/
+              mv ../alps_pie/prebuilts/{c,d}* -t ./prebuilts/
               git add prebuilts/{c,d}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .prebuilds-c-d"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/prebuilts/g* ./prebuilts/
+              mv ../alps_pie/prebuilts/g* -t ./prebuilts/
               git add prebuilts/g*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .prebuilds-g"
@@ -472,25 +472,25 @@ jobs:
               du -sh .git
               echo "Phase-5 Done"
               sleep 10s
-              mv ../alps_pie/prebuilts/{j,k}* ./prebuilts/
+              mv ../alps_pie/prebuilts/{j,k}* -t ./prebuilts/
               git add prebuilts/{j,k}*
               git commit -m "Initial t-alps-release-p0.mp2-V3.100 Upload" 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .prebuilds-j-k"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/prebuilts/{l,m}* ./prebuilts/
+              mv ../alps_pie/prebuilts/{l,m}* -t ./prebuilts/
               git add prebuilts/{l,m}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .prebuilds-l-m"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/prebuilts/{ndk,python} ./prebuilts/
+              mv ../alps_pie/prebuilts/{ndk,python} -t ./prebuilts/
               git add prebuilts/{ndk,python}
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .prebuilds-ndk-py"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               du -sh .git
-              mv ../alps_pie/prebuilts/{q,r}* ./prebuilts/
+              mv ../alps_pie/prebuilts/{q,r}* -t ./prebuilts/
               git add prebuilts/{q,r}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files, .prebuilds-q-r"
@@ -516,7 +516,7 @@ jobs:
               du -sh .git
               sleep 10s
               echo "Checking and Adding any leftover"
-              mv ../alps_pie/* . || echo "No files left"
+              mv ../alps_pie/* -t . || echo "No files left"
               git add -A . || echo "no leftover files added"
               git commit -m "Final Push" 2>&1 1>>../git.log | tee -a ../error.log || echo "No need to commit"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
