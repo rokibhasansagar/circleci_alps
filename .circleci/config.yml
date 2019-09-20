@@ -52,7 +52,7 @@ jobs:
       - run:
           name: Preprocess Alpine Packages
           command: |
-            apk add -uU --no-cache --purge bash alpine-sdk sudo shadow curl ca-certificates openssl git unzip tar xz gzip aria2
+            apk add -uU --no-cache --purge bash alpine-sdk sudo shadow curl ca-certificates openssl git git-lfs unzip tar xz gzip aria2
       - run:
           name: Set new Alpine user
           command: |
@@ -254,7 +254,7 @@ jobs:
               git init
               echo "git init done."
               git remote add origin "https://github.com/${GitHubName}/ALPS_Pie_Source.git"
-              git add Android.bp Makefile bootstrap.bash a* b* c* dalvik developers development
+              git add Android.bp Makefile bootstrap.bash {a,b,c}* dalvik developers development
               echo "Primary Addition done. Commiting..."
               git commit -m "Initial t-alps-release-p0.mp2-V3.100 Upload" 2>&1 1>>../git.log | tee -a ../error.log
               echo "Final push started."
@@ -263,11 +263,83 @@ jobs:
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
-              git add external
+              git add external/a*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
-              git add f* h*
+              git add external/b*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/c*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/d*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/e*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/f*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/g*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/{h,i}*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/j*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/k*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/lib*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/l*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/m*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/{n,o}*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/p*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/r*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/s*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/t*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add external/{u,v,w,x,z}*
+              git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
+              echo "Pushing more and more files"
+              git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
+              git add {f,h}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
@@ -295,11 +367,11 @@ jobs:
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
-              git add prebuilts/{a*,b*}
+              git add prebuilts/{a,b}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
-              git add prebuilts/{c*,d*}
+              git add prebuilts/{c,d}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
@@ -307,11 +379,11 @@ jobs:
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
-              git add prebuilts/{j*,k*}
+              git add prebuilts/{j,k}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
-              git add prebuilts/{l*,m*}
+              git add prebuilts/{l,m}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
@@ -319,7 +391,7 @@ jobs:
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
-              git add prebuilts/{q*,r*}
+              git add prebuilts/{q,r}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
               echo "Pushing more and more files"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/ALPS_Pie_Source.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log
