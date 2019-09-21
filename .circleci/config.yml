@@ -220,6 +220,7 @@ jobs:
               cd work/
               git checkout --orphan alps_pie
               git rm --cached -r .
+              git reset --hard || rm LICENSE README.md
               cd .. && rm -rf Android.bp bootstrap.bash && cd -
               cd .. && mv alps_pie/{a*,b*,c*,dalvik,developers,development} work/ && cd -
               cd .. && mv alps_pie/Makefile work/ && cd -
