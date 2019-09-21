@@ -206,7 +206,7 @@ jobs:
             rm *.tar.gz
             mv "t-alps-release-p0.mp2-V3.100.mt6737-53-39-6580" "alps_pie"
             cd alps_pie/
-            ls -la */
+            ls */
       - run:
           name: Git, Set, Upload
           command: |
@@ -220,11 +220,12 @@ jobs:
               cd work/
               git checkout --orphan alps_pie
               git rm --cached -r .
-              cd .. && rm -f Android.bp bootstrap.bash && cd -
+              cd .. && rm -rf Android.bp bootstrap.bash && cd -
               cd .. && mv alps_pie/{a*,b*,c*,dalvik,developers,development} work/ && cd -
               cd .. && mv alps_pie/Makefile work/ && cd -
-              ln -s build/soong/root.bp Android.bp
-              ln -s build/soong/bootstrap.bash bootstrap.bash
+              rm -rf Android.bp bootstrap.bash || echo "symlinks not deleted"
+              ln -s build/soong/root.bp Android.bp || echo "symlink bp failed"
+              ln -s build/soong/bootstrap.bash bootstrap.bash || echo "symlink bash failed"
               git add -A .
               echo "Primary Addition done. Commiting..."
               git commit -m "Initial t-alps-release-p0.mp2-V3.100 Upload" 2>&1 1>>../git.log | tee -a ../error.log
