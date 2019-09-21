@@ -238,6 +238,7 @@ jobs:
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               ls -l 1>../list.txt
               sleep 2s
+              mkdir external
               cd .. && mv alps_pie/external/a* work/external/ && cd -
               git add external/a*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
@@ -421,6 +422,7 @@ jobs:
               echo "Pushing more and more files, .vendor"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               sleep 5s
+              mkdir prebuilts
               cd .. && mv alps_pie/prebuilts/{a,b}* work/prebuilts/ && cd -
               git add prebuilts/{a,b}*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
