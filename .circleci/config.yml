@@ -41,134 +41,135 @@ jobs:
           name: Seperate the Parts URL
           command: |
             set -xe
-            head -n 2 "All_URI" | tail -1 > gz00_uri
-            head -n 5 "All_URI" | tail -1 > gz01_uri
-            head -n 8 "All_URI" | tail -1 > gz02_uri
-            head -n 11 "All_URI" | tail -1 > gz03_uri
-            head -n 14 "All_URI" | tail -1 > gz04_uri
-            head -n 17 "All_URI" | tail -1 > gz05_uri
-            head -n 20 "All_URI" | tail -1 > gz06_uri
-            head -n 23 "All_URI" | tail -1 > gz07_uri
-            head -n 26 "All_URI" | tail -1 > gz08_uri
-            head -n 29 "All_URI" | tail -1 > gz09_uri
-            head -n 32 "All_URI" | tail -1 > gz10_uri
-            head -n 35 "All_URI" | tail -1 > gz11_uri
-            head -n 38 "All_URI" | tail -1 > gz12_uri
-            head -n 41 "All_URI" | tail -1 > gz13_uri
-            head -n 44 "All_URI" | tail -1 > gz14_uri
-            head -n 47 "All_URI" | tail -1 > gz15_uri
-            head -n 50 "All_URI" | tail -1 > gz16_uri
-            head -n 53 "All_URI" | tail -1 > gz17_uri
-            head -n 56 "All_URI" | tail -1 > gz18_uri
-            head -n 59 "All_URI" | tail -1 > gz19_uri
-            head -n 62 "All_URI" | tail -1 > gz20_uri
+            head -n 2 "All_URI" | tail -1 > gz00_uri.txt
+            head -n 5 "All_URI" | tail -1 > gz01_uri.txt
+            head -n 8 "All_URI" | tail -1 > gz02_uri.txt
+            head -n 11 "All_URI" | tail -1 > gz03_uri.txt
+            head -n 14 "All_URI" | tail -1 > gz04_uri.txt
+            head -n 17 "All_URI" | tail -1 > gz05_uri.txt
+            head -n 20 "All_URI" | tail -1 > gz06_uri.txt
+            head -n 23 "All_URI" | tail -1 > gz07_uri.txt
+            head -n 26 "All_URI" | tail -1 > gz08_uri.txt
+            head -n 29 "All_URI" | tail -1 > gz09_uri.txt
+            head -n 32 "All_URI" | tail -1 > gz10_uri.txt
+            head -n 35 "All_URI" | tail -1 > gz11_uri.txt
+            head -n 38 "All_URI" | tail -1 > gz12_uri.txt
+            head -n 41 "All_URI" | tail -1 > gz13_uri.txt
+            head -n 44 "All_URI" | tail -1 > gz14_uri.txt
+            head -n 47 "All_URI" | tail -1 > gz15_uri.txt
+            head -n 50 "All_URI" | tail -1 > gz16_uri.txt
+            head -n 53 "All_URI" | tail -1 > gz17_uri.txt
+            head -n 56 "All_URI" | tail -1 > gz18_uri.txt
+            head -n 59 "All_URI" | tail -1 > gz19_uri.txt
+            head -n 62 "All_URI" | tail -1 > gz20_uri.txt
+            mv gz*_uri.txt /home/alpine/
       - run:
           name: Get All the Parts in One Place
           command: |
             set -xe
             cd /home/alpine/
             echo "Downloading part 00"
-            aria2c -x16 -i "gz00_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz00_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 00 as XX"
             cat ${GZ00} >> ${GZXX}
             rm ${GZ00}
             echo "Downloading part 01"
-            aria2c -x16 -i "gz01_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz01_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 01 onto XX"
             cat ${GZ01} >> ${GZXX}
             rm ${GZ01}
             echo "Downloading part 02"
-            aria2c -x16 -i "gz02_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz02_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 02 onto XX"
             cat ${GZ02} >> ${GZXX}
             rm ${GZ02}
             echo "Downloading part 03"
-            aria2c -x16 -i "gz03_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz03_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 03 onto XX"
             cat ${GZ03} >> ${GZXX}
             rm ${GZ03}
             echo "Downloading part 04"
-            aria2c -x16 -i "gz04_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz04_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 04 onto XX"
             cat ${GZ04} >> ${GZXX}
             rm ${GZ04}
             echo "Downloading part 05"
-            aria2c -x16 -i "gz05_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz05_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 05 onto XX"
             cat ${GZ05} >> ${GZXX}
             rm ${GZ05}
             echo "Downloading part 06"
-            aria2c -x16 -i "gz06_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz06_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 06 onto XX"
             cat ${GZ06} >> ${GZXX}
             rm ${GZ06}
             echo "Downloading part 07"
-            aria2c -x16 -i "gz07_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz07_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 07 onto XX"
             cat ${GZ07} >> ${GZXX}
             rm ${GZ07}
             echo "Downloading part 08"
-            aria2c -x16 -i "gz08_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz08_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 08 onto XX"
             cat ${GZ08} >> ${GZXX}
             rm ${GZ08}
             echo "Downloading part 09"
-            aria2c -x16 -i "gz09_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz09_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 09 onto XX"
             cat ${GZ09} >> ${GZXX}
             rm ${GZ09}
             echo "Downloading part 10"
-            aria2c -x16 -i "gz10_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz10_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 10 onto XX"
             cat ${GZ10} >> ${GZXX}
             rm ${GZ10}
             echo "Downloading part 11"
-            aria2c -x16 -i "gz11_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz11_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 11 onto XX"
             cat ${GZ11} >> ${GZXX}
             rm ${GZ11}
             echo "Downloading part 12"
-            aria2c -x16 -i "gz12_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz12_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 12 onto XX"
             cat ${GZ12} >> ${GZXX}
             rm ${GZ12}
             echo "Downloading part 13"
-            aria2c -x16 -i "gz13_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz13_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 13 onto XX"
             cat ${GZ13} >> ${GZXX}
             rm ${GZ13}
             echo "Downloading part 14"
-            aria2c -x16 -i "gz14_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz14_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 14 onto XX"
             cat ${GZ14} >> ${GZXX}
             rm ${GZ14}
             echo "Downloading part 15"
-            aria2c -x16 -i "gz15_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz15_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 15 onto XX"
             cat ${GZ15} >> ${GZXX}
             rm ${GZ15}
             echo "Downloading part 16"
-            aria2c -x16 -i "gz16_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz16_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 16 onto XX"
             cat ${GZ16} >> ${GZXX}
             rm ${GZ16}
             echo "Downloading part 17"
-            aria2c -x16 -i "gz17_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz17_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 17 onto XX"
             cat ${GZ17} >> ${GZXX}
             rm ${GZ17}
             echo "Downloading part 18"
-            aria2c -x16 -i "gz18_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz18_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 18 onto XX"
             cat ${GZ18} >> ${GZXX}
             rm ${GZ18}
             echo "Downloading part 19"
-            aria2c -x16 -i "gz19_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz19_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 19 onto XX"
             cat ${GZ19} >> ${GZXX}
             rm ${GZ19}
             echo "Downloading last part 20"
-            aria2c -x16 -i "gz20_uri" 2>&1 1>>dl.log | tee -a error.log
+            aria2c -x16 -i "gz20_uri.txt" 2>&1 1>>dl.log | tee -a error.log
             echo "Appending part 20 onto XX"
             cat ${GZ20} >> ${GZXX}
             rm ${GZ20}
