@@ -69,127 +69,127 @@ jobs:
             set -xe
             cd /home/alpine/
             echo "Downloading part 00"
-            aria2c -x16 -s6 $(cat gz00_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz00_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 00 as XX"
             cat ${GZ00} >> ${GZXX}
             rm ${GZ00}
             echo "Downloading part 01"
-            aria2c -x16 -s6 $(cat gz01_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz01_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 01 onto XX"
             cat ${GZ01} >> ${GZXX}
             rm ${GZ01}
             echo "Downloading part 02"
-            aria2c -x16 -s6 $(cat gz02_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz02_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 02 onto XX"
             cat ${GZ02} >> ${GZXX}
             rm ${GZ02}
             echo "Downloading part 03"
-            aria2c -x16 -s6 $(cat gz03_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz03_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 03 onto XX"
             cat ${GZ03} >> ${GZXX}
             rm ${GZ03}
             echo "Downloading part 04"
-            aria2c -x16 -s6 $(cat gz04_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz04_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 04 onto XX"
             cat ${GZ04} >> ${GZXX}
             rm ${GZ04}
             echo "Downloading part 05"
-            aria2c -x16 -s6 $(cat gz05_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz05_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 05 onto XX"
             cat ${GZ05} >> ${GZXX}
             rm ${GZ05}
             echo "Downloading part 06"
-            aria2c -x16 -s6 $(cat gz06_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz06_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 06 onto XX"
             cat ${GZ06} >> ${GZXX}
             rm ${GZ06}
             echo "Downloading part 07"
-            aria2c -x16 -s6 $(cat gz07_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz07_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 07 onto XX"
             cat ${GZ07} >> ${GZXX}
             rm ${GZ07}
             echo "Downloading part 08"
-            aria2c -x16 -s6 $(cat gz08_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz08_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 08 onto XX"
             cat ${GZ08} >> ${GZXX}
             rm ${GZ08}
             echo "Downloading part 09"
-            aria2c -x16 -s6 $(cat gz09_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz09_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 09 onto XX"
             cat ${GZ09} >> ${GZXX}
             rm ${GZ09}
             echo "Downloading part 10"
-            aria2c -x16 -s6 $(cat gz10_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz10_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 10 onto XX"
             cat ${GZ10} >> ${GZXX}
             rm ${GZ10}
             echo "Downloading part 11"
-            aria2c -x16 -s6 $(cat gz11_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz11_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 11 onto XX"
             cat ${GZ11} >> ${GZXX}
             rm ${GZ11}
             echo "Downloading part 12"
-            aria2c -x16 -s6 $(cat gz12_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz12_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 12 onto XX"
             cat ${GZ12} >> ${GZXX}
             rm ${GZ12}
             echo "Downloading part 13"
-            aria2c -x16 -s6 $(cat gz13_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz13_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 13 onto XX"
             cat ${GZ13} >> ${GZXX}
             rm ${GZ13}
             echo "Downloading part 14"
-            aria2c -x16 -s6 $(cat gz14_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz14_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 14 onto XX"
             cat ${GZ14} >> ${GZXX}
             rm ${GZ14}
             echo "Downloading part 15"
-            aria2c -x16 -s6 $(cat gz15_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz15_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 15 onto XX"
             cat ${GZ15} >> ${GZXX}
             rm ${GZ15}
             echo "Downloading part 16"
-            aria2c -x16 -s6 $(cat gz16_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz16_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 16 onto XX"
             cat ${GZ16} >> ${GZXX}
             rm ${GZ16}
             echo "Downloading part 17"
-            aria2c -x16 -s6 $(cat gz17_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz17_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 17 onto XX"
             cat ${GZ17} >> ${GZXX}
             rm ${GZ17}
             echo "Downloading part 18"
-            aria2c -x16 -s6 $(cat gz18_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz18_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 18 onto XX"
             cat ${GZ18} >> ${GZXX}
             rm ${GZ18}
             echo "Downloading part 19"
-            aria2c -x16 -s6 $(cat gz19_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz19_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 19 onto XX"
             cat ${GZ19} >> ${GZXX}
             rm ${GZ19}
             echo "Downloading last part 20"
-            aria2c -x16 -s6 $(cat gz20_uri.txt) 2>&1 | tee -a dl.log
+            aria2c -x16 -s6 $(cat gz20_uri.txt) 2>&1 1>>dl.log | tee -a error.log
             ls -l *.gz*
             echo "Appending part 20 onto XX"
             cat ${GZ20} >> ${GZXX}
@@ -206,9 +206,9 @@ jobs:
             rm *.tar.gz
             mv "t-alps-release-p0.mp2-V3.100.mt6737-53-39-6580" "alps_pie"
             cd alps_pie/
-            du -sh */*
+            ls -laR *
       - run:
-          name: Git.. Set... Upload.....
+          name: Git, Set, Upload
           command: |
             set -xe
             git config --global user.email $GitHubMail
@@ -221,7 +221,10 @@ jobs:
               git checkout --orphan alps_pie
               git rm --cached -r .
               cd .. && mv alps_pie/{a*,b*,c*,dalvik,developers,development} work/ && cd -
-              cd .. && mv alps_pie/{Android.bp,Makefile,bootstrap.bash} work/ && cd -
+              cd .. && mv alps_pie/Makefile work/ && cd -
+              cd .. && rm -f Android.bp bootstrap.bash && cd -
+              ln -s build/soong/root.bp Android.bp
+              ln -s build/soong/bootstrap.bash bootstrap.bash
               git add -A .
               echo "Primary Addition done. Commiting..."
               git commit -m "Initial t-alps-release-p0.mp2-V3.100 Upload" 2>&1 1>>../git.log | tee -a ../error.log
