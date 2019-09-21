@@ -237,7 +237,7 @@ jobs:
               echo "Pushing more and more files, .device"
               git push --force https://${GITHUB_TOKEN}@github.com/${GitHubName}/${ALPS_Dest}.git HEAD:alps_pie 2>&1 1>>../git.log | tee -a ../error.log || echo "No more files added"
               ls -l 1>../list.txt
-              sleep 2z
+              sleep 2s
               cd .. && mv alps_pie/external/a* work/external/ && cd -
               git add external/a*
               git commit --amend --no-edit 2>&1 1>>../git.log | tee -a ../error.log
